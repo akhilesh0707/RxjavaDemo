@@ -1,8 +1,11 @@
-package com.aqube.rxjava;
+package com.aqube.rxjava.observables;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+
+import com.aqube.rxjava.R;
 
 public class ObservablesActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -22,6 +25,7 @@ public class ObservablesActivity extends AppCompatActivity implements View.OnCli
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.button_observable:
+                startActivity(new Intent(ObservablesActivity.this, ObservableActivity.class));
                 break;
             case R.id.button_flowable:
                 break;

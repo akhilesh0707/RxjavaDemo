@@ -16,8 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ObservablesActivity" />
-        <activity android:name=".OperatorsActivity"></activity>
+        <activity android:name=".observables.ObservablesActivity" />
+        <activity android:name=".OperatorsActivity" />
+        <activity android:name=".observables.ObservableActivity"></activity>
     </application>
 
 </manifest>
