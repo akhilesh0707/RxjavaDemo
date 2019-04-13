@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding_16"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button_observables"
+        android:layout_width="match_parent"
+        android:text="@string/button_label_observables"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/button_operators"
+        android:layout_width="match_parent"
+        android:text="@string/button_label_operators"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>
