@@ -1,13 +1,4 @@
-#Sat Apr 13 22:01:24 IST 2019
-path.3=classes.dex
-path.2=classes.dex
-path.1=classes.dex
+#Sun Apr 14 01:41:54 IST 2019
+base.0=C\:\\Users\\Aki\\AndroidStudioProjects\\RxJavaDemo\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 path.0=classes.dex
-renamed.3=classes4.dex
-renamed.2=classes3.dex
-renamed.1=classes2.dex
 renamed.0=classes.dex
-base.3=C\:\\Users\\Aki\\AndroidStudioProjects\\RxJavaDemo\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\12
-base.2=C\:\\Users\\Aki\\AndroidStudioProjects\\RxJavaDemo\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\14
-base.1=C\:\\Users\\Aki\\AndroidStudioProjects\\RxJavaDemo\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\11
-base.0=C\:\\Users\\Aki\\AndroidStudioProjects\\RxJavaDemo\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\13
