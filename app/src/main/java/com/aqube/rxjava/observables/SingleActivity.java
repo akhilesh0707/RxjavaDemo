@@ -81,7 +81,9 @@ public class SingleActivity extends AppCompatActivity implements View.OnClickLis
         return Single.create(new SingleOnSubscribe<User>() {
             @Override
             public void subscribe(SingleEmitter<User> emitter) throws Exception {
-               emitter.onSuccess(UserUtil.getUser());
+                if (!emitter.isDisposed()) {
+                    emitter.onSuccess(UserUtil.getUser());
+                }
             }
         });
     }
