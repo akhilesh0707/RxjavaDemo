@@ -1,9 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".OperatorsActivity">
+    android:layout_height="wrap_content">
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_16"
+        tools:context=".operators.OperatorsActivity">
+
+        <Button
+            android:id="@+id/button_operator_map"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_label_operator_map" />
+
+        <Button
+            android:id="@+id/button_operator_flat_map"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_label_operator_flat_map" />
+
+        <Button
+            android:id="@+id/button_operator_concat_map"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_label_operator_concat_map" />
+
+        <Button
+            android:id="@+id/button_operator_switch_map"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_label_operator_switch_map" />
+
+        <Button
+            android:id="@+id/button_operator_buffer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_label_operator_buffer" />
+
+        <Button
+            android:id="@+id/button_operator_debounce"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_label_operator_debounce" />
+
+        <Button
+            android:id="@+id/button_operator_concat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_label_operator_concat" />
+
+        <Button
+            android:id="@+id/button_operator_merge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_label_operator_merge" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/padding_16"
+            android:layout_marginTop="@dimen/padding_16"
+            android:text="@string/label_mathematical" />
+
+        <Button
+            android:id="@+id/button_operator_math_max"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_label_operator_max" />
+
+        <Button
+            android:id="@+id/button_operator_math_min"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_label_operator_min" />
+
+        <Button
+            android:id="@+id/button_operator_math_sum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_label_operator_sum" />
+
+        <Button
+            android:id="@+id/button_operator_math_average"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_label_operator_average" />
+
+        <Button
+            android:id="@+id/button_operator_math_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_label_operator_average" />
+
+        <Button
+            android:id="@+id/button_operator_math_reduce"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_label_operator_reduce" />
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

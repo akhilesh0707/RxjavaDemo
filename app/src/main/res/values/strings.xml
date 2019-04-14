@@ -8,4 +8,18 @@
     <string name="button_label_maybe">Maybe</string>
     <string name="button_label_completable">Completable</string>
     <string name="button_label_get_data">Get Data</string>
+    <string name="button_label_operator_map">map()</string>
+    <string name="button_label_operator_flat_map">flatMap()</string>
+    <string name="button_label_operator_concat_map">concatMap()</string>
+    <string name="button_label_operator_switch_map">switchMap()</string>
+    <string name="button_label_operator_buffer">buffer()</string>
+    <string name="button_label_operator_debounce">debounce()</string>
+    <string name="button_label_operator_concat">concat()</string>
+    <string name="button_label_operator_merge">merge()</string>
+    <string name="button_label_operator_max">max()</string>
+    <string name="button_label_operator_min">min()</string>
+    <string name="button_label_operator_sum">sum()</string>
+    <string name="button_label_operator_average">average()</string>
+    <string name="button_label_operator_reduce">reduce()</string>
+    <string name="label_mathematical">Mathematical and Aggregate Operators</string>
 </resources>

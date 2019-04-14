@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".observables.ObservablesActivity" />
-        <activity android:name=".OperatorsActivity" />
+        <activity android:name=".operators.OperatorsActivity" />
         <activity android:name=".observables.ObservableActivity" />
         <activity android:name=".observables.FlowableActivity" />
         <activity android:name=".observables.SingleActivity" />

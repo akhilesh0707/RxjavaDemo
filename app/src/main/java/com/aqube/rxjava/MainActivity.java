@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.aqube.rxjava.observables.ObservablesActivity;
+import com.aqube.rxjava.operators.OperatorsActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
