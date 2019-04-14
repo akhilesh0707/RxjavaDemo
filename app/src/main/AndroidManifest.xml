@@ -18,7 +18,11 @@
         </activity>
         <activity android:name=".observables.ObservablesActivity" />
         <activity android:name=".OperatorsActivity" />
-        <activity android:name=".observables.ObservableActivity"></activity>
+        <activity android:name=".observables.ObservableActivity" />
+        <activity android:name=".observables.FlowableActivity" />
+        <activity android:name=".observables.SingleActivity" />
+        <activity android:name=".observables.MaybeActivity" />
+        <activity android:name=".observables.CompletableActivity"></activity>
     </application>
 
 </manifest>

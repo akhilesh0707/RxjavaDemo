@@ -1,27 +1,25 @@
 package com.aqube.rxjava.observables;
 
+import android.annotation.SuppressLint;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
 import com.aqube.rxjava.R;
 import com.aqube.rxjava.util.Constants;
-import com.aqube.rxjava.util.User;
-import com.aqube.rxjava.util.UserUtil;
 
-import java.util.List;
+import java.util.Random;
 
-import io.reactivex.Observable;
-import io.reactivex.ObservableEmitter;
-import io.reactivex.ObservableOnSubscribe;
-import io.reactivex.Observer;
+import io.reactivex.Flowable;
+import io.reactivex.Scheduler;
+import io.reactivex.SingleObserver;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.functions.BiFunction;
 import io.reactivex.schedulers.Schedulers;
 
-public class ObservableActivity extends AppCompatActivity implements View.OnClickListener {
+public class FlowableActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Disposable disposable;
     private TextView textViewDisplay;
@@ -29,7 +27,7 @@ public class ObservableActivity extends AppCompatActivity implements View.OnClic
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_observable);
+        setContentView(R.layout.activity_flowable);
         findViewById(R.id.button_get_data).setOnClickListener(this);
         textViewDisplay = findViewById(R.id.text_view_message);
     }
@@ -51,11 +49,18 @@ public class ObservableActivity extends AppCompatActivity implements View.OnClic
             disposable.dispose();
     }
 
+    @SuppressLint("CheckResult")
     private void getData() {
-        getUserObservable()
-                .observeOn(AndroidSchedulers.mainThread())
+        getFlowable()
                 .subscribeOn(Schedulers.io())
-                .subscribe(new Observer<User>() {
+                .observeOn(AndroidSchedulers.mainThread())
+                .reduce(0, new BiFunction<Integer, Integer, Integer>() {
+                    @Override
+                    public Integer apply(Integer integer, Integer integer2) {
+                        return integer + integer2;
+                    }
+                })
+                .subscribe(new SingleObserver<Integer>() {
                     @Override
                     public void onSubscribe(Disposable d) {
                         textViewDisplay.append("onSubscribe");
@@ -64,40 +69,22 @@ public class ObservableActivity extends AppCompatActivity implements View.OnClic
                     }
 
                     @Override
-                    public void onNext(User user) {
-                        textViewDisplay.append(user.getName());
+                    public void onSuccess(Integer integer) {
+                        textViewDisplay.append("onSuccess");
+                        textViewDisplay.append(Constants.LINE_SEPARATOR);
+                        textViewDisplay.append(String.valueOf(integer));
                         textViewDisplay.append(Constants.LINE_SEPARATOR);
                     }
 
                     @Override
                     public void onError(Throwable e) {
-                        textViewDisplay.append("onError: " + e.getMessage());
-                        textViewDisplay.append(Constants.LINE_SEPARATOR);
-                    }
-
-                    @Override
-                    public void onComplete() {
-                        textViewDisplay.append("onComplete");
+                        textViewDisplay.append("onError");
                         textViewDisplay.append(Constants.LINE_SEPARATOR);
                     }
                 });
     }
 
-    private Observable<User> getUserObservable() {
-        final List<User> userList = UserUtil.getUserList();
-        return Observable.create(new ObservableOnSubscribe<User>() {
-            @Override
-            public void subscribe(ObservableEmitter<User> emitter) {
-                for (User user : userList) {
-                    if (!emitter.isDisposed()) {
-                        emitter.onNext(user);
-                    }
-                }
-                // all notes are emitted
-                if (!emitter.isDisposed()) {
-                    emitter.onComplete();
-                }
-            }
-        });
+    private Flowable<Integer> getFlowable() {
+        return Flowable.range(0, new Random().nextInt(500));
     }
 }

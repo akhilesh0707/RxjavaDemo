@@ -13,7 +13,11 @@ public class ObservablesActivity extends AppCompatActivity implements View.OnCli
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_observables);
+        initView();
+    }
 
+    private void initView(){
+        // Setting click listeners
         findViewById(R.id.button_observable).setOnClickListener(this);
         findViewById(R.id.button_flowable).setOnClickListener(this);
         findViewById(R.id.button_single).setOnClickListener(this);
@@ -28,12 +32,16 @@ public class ObservablesActivity extends AppCompatActivity implements View.OnCli
                 startActivity(new Intent(ObservablesActivity.this, ObservableActivity.class));
                 break;
             case R.id.button_flowable:
+                startActivity(new Intent(ObservablesActivity.this, FlowableActivity.class));
                 break;
             case R.id.button_single:
+                startActivity(new Intent(ObservablesActivity.this, SingleActivity.class));
                 break;
             case R.id.button_maybe:
+                startActivity(new Intent(ObservablesActivity.this, MaybeActivity.class));
                 break;
             case R.id.button_completable:
+                startActivity(new Intent(ObservablesActivity.this, CompletableActivity.class));
                 break;
             default:
         }
