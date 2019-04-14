@@ -94,7 +94,7 @@
             android:id="@+id/button_operator_math_count"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/button_label_operator_average" />
+            android:text="@string/button_label_operator_count" />
 
         <Button
             android:id="@+id/button_operator_math_reduce"

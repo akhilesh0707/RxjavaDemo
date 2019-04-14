@@ -22,4 +22,5 @@
     <string name="button_label_operator_average">average()</string>
     <string name="button_label_operator_reduce">reduce()</string>
     <string name="label_mathematical">Mathematical and Aggregate Operators</string>
+    <string name="button_label_operator_count">count()</string>
 </resources>
