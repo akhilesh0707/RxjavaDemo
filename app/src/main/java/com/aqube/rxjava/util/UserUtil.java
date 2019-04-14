@@ -15,4 +15,8 @@ public class UserUtil {
         userList.add(new User(6, "Umesh"));
         return userList;
     }
+
+    public static User getUser() {
+        return new User(7,"Akhliesh");
+    }
 }
