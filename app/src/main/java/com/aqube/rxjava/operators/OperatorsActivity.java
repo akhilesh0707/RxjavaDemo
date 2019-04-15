@@ -1,7 +1,8 @@
 package com.aqube.rxjava.operators;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.aqube.rxjava.R;
@@ -36,20 +37,28 @@ public class OperatorsActivity extends AppCompatActivity implements View.OnClick
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.button_operator_map:
+                startActivity(new Intent(OperatorsActivity.this, MapActivity.class));
                 break;
             case R.id.button_operator_flat_map:
+                startActivity(new Intent(OperatorsActivity.this, FlatMapActivity.class));
                 break;
             case R.id.button_operator_concat_map:
+                startActivity(new Intent(OperatorsActivity.this, ConcatMapActivity.class));
                 break;
             case R.id.button_operator_switch_map:
+                startActivity(new Intent(OperatorsActivity.this, SwitchMapActivity.class));
                 break;
             case R.id.button_operator_buffer:
+                startActivity(new Intent(OperatorsActivity.this, BufferActivity.class));
                 break;
             case R.id.button_operator_debounce:
+                startActivity(new Intent(OperatorsActivity.this, DebounceActivity.class));
                 break;
             case R.id.button_operator_concat:
+                startActivity(new Intent(OperatorsActivity.this, ConcatActivity.class));
                 break;
             case R.id.button_operator_merge:
+                startActivity(new Intent(OperatorsActivity.this, MergeActivity.class));
                 break;
             case R.id.button_operator_math_max:
                 break;

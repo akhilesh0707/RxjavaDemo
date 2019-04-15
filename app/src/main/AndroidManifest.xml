@@ -22,7 +22,15 @@
         <activity android:name=".observables.FlowableActivity" />
         <activity android:name=".observables.SingleActivity" />
         <activity android:name=".observables.MaybeActivity" />
-        <activity android:name=".observables.CompletableActivity"></activity>
+        <activity android:name=".observables.CompletableActivity" />
+        <activity android:name=".operators.MapActivity" />
+        <activity android:name=".operators.FlatMapActivity" />
+        <activity android:name=".operators.ConcatMapActivity" />
+        <activity android:name=".operators.SwitchMapActivity" />
+        <activity android:name=".operators.BufferActivity" />
+        <activity android:name=".operators.DebounceActivity" />
+        <activity android:name=".operators.ConcatActivity" />
+        <activity android:name=".operators.MergeActivity"></activity>
     </application>
 
 </manifest>
