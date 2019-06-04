@@ -29,4 +29,15 @@ dependencies {
     implementation 'io.reactivex.rxjava2:rxjava:2.1.9'
     // RxAndroid
     implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+
+    //Unit test
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'org.mockito:mockito-core:2.8.9'
+    testImplementation 'org.powermock:powermock-core:1.7.4'
+    testImplementation 'org.powermock:powermock-module-junit4:1.7.0RC2'
+    testImplementation 'org.powermock:powermock-api-mockito2:1.7.0RC2'
+    testImplementation group: 'org.powermock', name: 'powermock-module-junit4-rule', version: '1.7.4'
+    testImplementation "org.robolectric:robolectric:3.8"
+    testImplementation group: 'org.robolectric', name: 'shadows-support-v4', version: '3.3.2'
+    testImplementation 'com.openpojo:openpojo:0.8.7'
 }
